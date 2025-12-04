@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Magazine</title>
+<style>
+body{font-family:sans-serif;margin:0;background-color:white;color:black;}
+header{background-color:darkblue;color:white;padding:15px;text-align:center;}
+header img{max-width:100%;height:auto;margin-top:10px;}
+nav{background-color:lightblue;padding:10px;text-align:center;}
+nav a{color:black;text-decoration:none;margin:0 10px;font-weight:bold;}
+#container{display:flex;padding:10px;}
+main{flex:3;padding-right:15px;}
+main img{max-width:100%;height:auto;margin-bottom:10px;}
+aside{flex:1;background-color:lightgray;padding:15px;border-radius:5px;}
+article{margin-bottom:15px;}
+.recent-item{display:flex;align-items:center;margin-bottom:5px;}
+.recent-item img{width:40px;height:40px;margin-right:8px;object-fit:cover;}
+#readMore{background-color:green;color:white;padding:8px;border:none;cursor:pointer;}
+#subscribeBox{margin-top:20px;padding:10px;background-color:gray;color:white;border-radius:5px;}
+#subscribeBox input{width:90%;padding:5px;margin:5px 0;border:none;}
+#subscribeBtn{background-color:red;color:white;padding:6px;border:none;cursor:pointer;width:100%;}
+
+/* Contact Section Styling */
+#contact{max-width:1200px;margin:20px auto;padding:20px;background-color:lightyellow;}
+#contact h2{text-align:center;color:darkblue;}
+#contact form{max-width:600px;margin:0 auto;}
+#contact input[type="text"], #contact input[type="email"], #contact textarea{
+    width:100%;padding:10px;margin-bottom:10px;border:1px solid gray;box-sizing:border-box;
+}
+#contact textarea{height:100px;}
+#contact button{background-color:blue;color:white;padding:10px 15px;border:none;cursor:pointer;width:100%;}
+
+footer{background-color:darkblue;color:white;text-align:center;padding:10px;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>NEWS DAILY</h1>
+<img src="https://www.checkerboardnightmare.com/wp-content/uploads/2023/03/newspaper-on-the-counter-2022-11-08-06-12-18-utc-1-scaled.jpg"> 
+<nav>
+<a href="#">Home</a>
+<a href="#">World</a>
+<a href="#">Tech</a>
+</nav>
+</header>
+
+<div id="container">
+<main>
+<article>
+<h2>Space Travel Near</h2>
+<img src="https://i.redd.it/black-horizon-this-is-how-rocket-engines-work-in-my-sci-fi-v0-hu960zh266ub1.jpg?width=2560&format=pjpg&auto=webp&s=29bb2dab3c6f8eb863f6eab22b7995d90d9b4372">
+<p>New engine tech makes space travel cheaper and faster.</p>
+<button id="readMore">More</button>
+</article>
+
+<section id="recent">
+<h3>Recent</h3>
+<ul>
+<li class="recent-item">
+<img src="data:image/png;base64,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"> 
+<span>Cooking Trends</span>
+</li>
+<li class="recent-item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNSAvo3bW19Mvmzot4Rki80eAwpoPY3DzgaA&s" alt="Car Icon"> 
+<span>Electric Cars</span>
+</li>
+<li class="recent-item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1ZsJ3W4KHzB-2D3C6kDRpJq5cPjoWieOPyA&s" alt="Travel Icon"> 
+<span>Top Travel</span>
+</li>
+</ul>
+</section>
+</main>
+
+<aside>
+<h3>Topics</h3>
+<ul>
+<li>Politics</li>
+<li>Science</li>
+</ul>
+
+<div id="subscribeBox">
+<h3>Subscribe</h3>
+<input type="email" placeholder="Email">
+<button id="subscribeBtn">Sign Up</button>
+</div>
+</aside>
+</div>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>&copy; 2025 Mag</p>
+</footer>
+
+</body>
+</html>
